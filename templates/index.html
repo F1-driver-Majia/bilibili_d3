@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/static/js/d3.js"></script>
+    <script src="/static/js/vue.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+    <div class="index">
+        <div class="head-menu">
+            <div class="head-menu-field" v-on:click="lineUpdate" v- data-col="播放">播放</div>
+            <div class="head-menu-field" v-on:click="lineUpdate" data-col="点赞">点赞</div>
+            <div class="head-menu-field" v-on:click="lineUpdate" data-col="硬币">硬币</div>
+            <div class="head-menu-field" v-on:click="lineUpdate" data-col="分享">分享</div>
+            <div class="head-menu-field" v-on:click="lineUpdate" data-col="弹幕">弹幕</div>
+            <div class="head-menu-field" v-on:click="showyuntu">云图</div>
+            <div class="head-menu-field" v-on:click="showredu">热度</div>
+        </div>
+        <div class="title">bilibi数据可视化</div>
+        <div class="content">
+            <div class="tspan">数量/万个</div>
+            <div class="lineChart">
+                <svg width="5000"  id="linesvg" height='380'></svg>
+            </div>
+            <div class="tspan">百分比</div>
+            <div class="pieChart">
+                <svg width="1350" id="pieChart" height='380'></svg>
+            </div>
+        </div>
+
+        <div class="redu" v-if="redu">
+            <img src="/static/zhexian/yingshi.png" title="影视" class="zhexian">
+            <img src="/static/zhexian/guichu.png" title="鬼畜" class="zhexian">
+            <img src="/static/zhexian/shenghuo.png" title="生活" class="zhexian">
+            <img src="/static/zhexian/yinyue.png" title="音乐" class="zhexian">
+            <img src="/static/zhexian/yule.png" title="娱乐" class="zhexian">
+            <img src="/static/zhexian/youxi.png" title="游戏" class="zhexian">
+            <img src="/static/zhexian/donghua%20.png" title="动画" class="zhexian">
+            <img src="/static/zhexian/shishang.png" title="时尚" class="zhexian">
+        </div>
+
+        <div class="yuntu" v-if="yuntu">
+            <img src="/static/yuntu/yuntu.png" height="823.6" width="1412.85">
+        </div>
+
+    </div>
+
+    <script src="/static/js/index.js"></script>
+</body>
+
+</html>

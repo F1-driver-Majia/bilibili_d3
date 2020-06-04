@@ -1,0 +1,117 @@
+body {}
+
+.index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: visible;
+}
+
+.head-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 913px;
+    width: 7%;
+    background-color: rgb(51, 51, 51);
+}
+
+.head-menu .head-menu-field {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    text-align: center;
+    color: aliceblue;
+    user-select: none;
+}
+
+.head-menu .head-menu-field:nth-child(1) {
+    background-color: rgb(109, 153, 209);
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    width: 93%;
+    height: 50px;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.content {
+    background-color: #ececec;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    left: 7%;
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.lineChart {
+    background-color: white;
+    width: 1350px;
+    height: 400px;
+    margin: 20px;
+    overflow: scroll;
+}
+
+.pieChart{
+    background-color: white;
+    width: 1350px;
+}
+
+.yuntu{
+    background-color: #ececec;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    left: 7%;
+    width: 93%;
+    height: 823.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.redu{
+    background-color: #ececec;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    left: 7%;
+    width: 93%;
+    height: 823.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2000;
+}
+
+.zhexian{
+    height: 200px;
+    width: 400px;
+}
+.tspan{
+    width: 1350px;
+    height: 20px;
+    text-align: center;
+    background-color: transparent;
+    font-size: 17px;
+}
