@@ -217,14 +217,16 @@ new Vue({
 
             s = ['播放','点赞','硬币','分享','弹幕'];
             fields = document.getElementsByClassName('head-menu-field');
-            formercol = that.col;
 
             that.col = e.target.dataset.col;
-            i0 = s.indexOf(formercol)
+
             i1 = s.indexOf(that.col);
 
+            for(var i=0;i<fields.length;i++){
+                fields[i].style.backgroundColor = "transparent";
+            }
+
             fields[i1].style.backgroundColor = "rgb(109, 153, 209)";
-            fields[i0].style.backgroundColor = "transparent";
             //以上都是改变按钮颜色
 
 
@@ -254,6 +256,9 @@ new Vue({
 
         pieUpdate:function () {
             var that = this;
+            if(that.process){
+                clearInterval(that.process)
+            }
 
             data = that.data;
             pie = d3.pie()
@@ -286,6 +291,7 @@ new Vue({
             function update() {
                 if(i==that.months.length)
                     clearInterval(cir);
+                //停止前一个视图的刷新
 
                 arcs = pie(that.data[i]);
 
@@ -364,6 +370,7 @@ new Vue({
 
             var i=0;
             var cir = setInterval(update,2000)
+            that.process = cir;
 
         },
 
@@ -371,11 +378,19 @@ new Vue({
             this.yuntu = true;
             this.redu = false;
             fields = document.getElementsByClassName('head-menu-field');
+            for(var i=0;i<fields.length;i++){
+                fields[i].style.backgroundColor = "transparent";
+            }
+            fields[5].style.backgroundColor = "rgb(109, 153, 209)";
         },
         showredu:function (e) {
             this.redu = true;
             this.yuntu = false;
             fields = document.getElementsByClassName('head-menu-field');
+            for(var i=0;i<fields.length;i++){
+                fields[i].style.backgroundColor = "transparent";
+            }
+            fields[6].style.backgroundColor = "rgb(109, 153, 209)";
         }
     }
 })
